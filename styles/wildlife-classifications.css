@@ -1,0 +1,131 @@
+.habitat {
+    background-color: hsl(127, 25%, 90%);
+}
+.diet {
+    background-color: hsl(25, 51%, 90%);
+}
+.body-structure {
+    background-color: hsl(0, 0%, 90%);
+}
+
+main {
+    padding: 40px 20% ;
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.classification-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #4a4a4a;
+    font-size: 24px;
+    margin: 15px 15px 10px;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.5;
+    margin: 0 15px 20px;
+    flex-grow: 1;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #4A7C59;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin: 0 15px 20px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #3a6347;
+}
+
+.zigzag {
+    height: 13px;
+    width: 164px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 8px 10%;
+    }
+}
+@media screen and (max-width: 992px) {
+    main {
+        padding: 8px 5%;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    .classification-cards {
+        justify-content: center;
+    }
+    .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    .classification-cards {
+        justify-content: center;
+    }
+    .card {
+        flex: 0 0 100%;
+    }
+}

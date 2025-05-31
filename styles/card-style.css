@@ -1,0 +1,133 @@
+/* CARD COLOR */
+.vertebrate {
+    background-color: #E7D9CB;
+}
+.invertebrate {
+    background-color: #EEDBF0;
+}
+.herbivore {
+    background-color: #D6EFC2;
+}
+.carnivore {
+    background-color: #D0E2D0;
+}
+.omnivore {
+    background-color: #D5E3CE;
+}
+.aerial {
+    background-color: #E2FFCC;
+}
+.arboreal {
+    background-color: #E4EEC3;
+}
+.amphibian {
+    background-color: #D6EFC2;
+}
+.aquatic {
+    background-color: #C3EAEF;
+}
+.terrestrial {
+    background-color: #F4DCBE;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.card-text h1 {
+    font-size: 32px;
+    margin: 16px 0 8px;
+}
+.card {
+    margin: auto;
+    margin-bottom: 20px;
+    height: 265px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.25);
+    width: 100%;
+}
+.card-text {
+    width: 40%;
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card-image {
+    max-width: 60%;
+    object-fit: cover;
+}
+.btn-see-more {
+    width: 55%;
+    height: 50px;
+    font-family: 'Inter', regular;
+    font-size: 12pt;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #4A7C59;
+    color: #fff;
+    box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.btn-see-more:hover {
+    background-color: #3a6347;
+}
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 0 10%;
+    }
+}
+@media screen and (max-width: 992px) {
+    main {
+        padding: 0 5%;
+    }
+    .btn-see-more {
+        width: 80%;
+        font-size: 10pt;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card {
+        height: auto;
+        flex-direction: column;
+    }
+    .card-text {
+        width: 90%;
+        padding: 20px 5%;
+        order: 2;
+    }
+    .card-image {
+        max-width: 100%;
+        width: 100%;
+        order: 1;
+    }        
+    .btn-see-more {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 576px) {                                    
+    .card-text h1 {
+        font-size: 16pt;
+    }           
+    .card-text p {
+        font-size: 9pt;
+    }           
+    .btn-see-more {
+        height: 40px;
+        font-size: 10pt;
+    }
+}
+

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wildlife Philippines</title>
+<link href="../home-page-images/Slides/logo.png" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="../header-footer/header-footer.css" rel="stylesheet"/>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+section {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    padding: 40px 20px;
+}
+
+section h1 {
+    text-align: center;
+    margin: 1rem 2rem;
+    font-size: 2rem;
+    color: #4a7c59;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+.card {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border: 4px solid #000000;
+    outline: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: calc(20% - 15px);
+    aspect-ratio: 1/1;
+    position: relative;
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card:hover {
+    transform: scale(1.4);
+    z-index: 10; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+.back {
+    margin-top: 20px;
+    padding: 0.8rem 1.5rem;
+    background-color: #4a7c59;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.back:hover {
+    background-color: #3a6347;
+}
+.info--card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: #f8f2e7;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.img-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    border: 4px solid #000000;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    width: 100%;
+}
+
+.info-text {
+    text-align: justify;
+}
+.gallery {
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-container {
+    max-width: 85%;
+    margin: 20px auto;
+}
+
+.gallery-container .title {
+    font-size: 25px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.gallery-container .image-container {
+    columns: 1 200px;
+    gap: 10px;
+}
+
+.gallery-container .image-container img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .gallery-container .image-container {
+        columns: 2 200px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: calc(33.333% - 15px);
+    }
+    
+    .gallery-container .image-container {
+        columns: 3 200px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        width: calc(20% - 15px);
+    }
+    
+    .gallery-container .image-container {
+        columns: 4 200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card:hover {
+        transform: scale(1.25);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .card {
+        width: calc(50% - 15px);
+    }
+    
+    .card:hover {
+        transform: scale(1.2); 
+    }
+}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<div>
+<section>
+<h1>Meet The Team</h1>
+<div class="container">
+<div class="card" onclick="toggleVisibility('card0', true)"><img alt="Team member" src="IMG/20250506_064617_0000.png"/></div>
+<div class="card" onclick="toggleVisibility('card1', true)"><img alt="Team member" src="IMG/20250506_064617_0001.png"/></div>
+<div class="card" onclick="toggleVisibility('card2', true)"><img alt="Team member" src="IMG/20250506_064617_0002.png"/></div>
+<div class="card" onclick="toggleVisibility('card3', true)"><img alt="Team member" src="IMG/20250506_064617_0003.png"/></div>
+<div class="card" onclick="toggleVisibility('card4', true)"><img alt="Team member" src="IMG/20250506_064617_0004.png"/></div>
+</div>
+<button class="back" onclick="document.location = '/about-us/about-us.html'">Back</button>
+</section>
+<div class="modal-bg" id="modal-bg" onclick="closeAllCards()"></div>
+<div class="info--card" id="card0" onclick="event.stopPropagation()" style="display: none;">
+<div class="grid-container">
+<div class="img-holder">
+<div class="image">
+<img alt="Team member" src="IMG/20250506_064617_0000.png"/>
+</div>
+</div>
+<div class="main-info">
+<div class="info">
+<h2>Manicane, John Warren </h2>
+<h2>ROLES:</h2>
+<p class="info-text">
+<br/>Member
+                            <br/>Developer
+                        </p>
+</div>
+</div>
+<div class="class-info">
+<h2>MOTTO:</h2>
+<p class="info-text">
+                        "The wild is not ours to tame, but to cherish and protect"                
+                    </p>
+</div>
+</div>
+</div>
+<div class="info--card" id="card1" onclick="event.stopPropagation()" style="display: none;">
+<div class="grid-container">
+<div class="img-holder">
+<div class="image">
+<img alt="Team member" src="IMG/20250506_064617_0001.png"/>
+</div>
+</div>
+<div class="main-info">
+<div class="info">
+<h2>Espanto, Alexander Luis  </h2>
+<h2>ROLES:</h2>
+<p class="info-text">
+<br/>Member
+                            <br/>Developer
+                        </p>
+</div>
+</div>
+<div class="class-info">
+<h2>MOTTO:</h2>
+<p class="info-text">
+                        "Protecting nature today means a thriving world tomorrow."               
+                    </p>
+</div>
+</div>
+</div>
+<div class="info--card" id="card2" onclick="event.stopPropagation()" style="display: none;">
+<div class="grid-container">
+<div class="img-holder">
+<div class="image">
+<img alt="Team member" src="IMG/20250506_064617_0002.png"/>
+</div>
+</div>
+<div class="main-info">
+<div class="info">
+<h2>Caampued, John Kyle  </h2>
+<h2>ROLES:</h2>
+<p class="info-text">
+<br/>Member
+                            <br/>Web Developer
+                        </p>
+</div>
+</div>
+<div class="class-info">
+<h2>MOTTO:</h2>
+<p class="info-text">
+                        "Saving wildlife is survival, not kindness"                
+                    </p>
+</div>
+</div>
+</div>
+<div class="info--card" id="card3" onclick="event.stopPropagation()" style="display: none;">
+<div class="grid-container">
+<div class="img-holder">
+<div class="image">
+<img alt="Team member" src="IMG/20250506_064617_0003.png"/>
+</div>
+</div>
+<div class="main-info">
+<div class="info">
+<h2>Mirang, Joshua Christian  </h2>
+<h2>ROLES:</h2>
+<p class="info-text">
+<br/>Project Manager
+                            <br/>Web Developer
+                        </p>
+</div>
+</div>
+<div class="class-info">
+<h2>MOTTO:</h2>
+<p class="info-text">
+                        "Wildlife is something which man cannot construct"                
+                    </p>
+</div>
+</div>
+</div>
+<div class="info--card" id="card4" onclick="event.stopPropagation()" style="display: none;">
+<div class="grid-container">
+<div class="img-holder">
+<div class="image">
+<img alt="Team member" src="IMG/20250506_064617_0004.png"/>
+</div>
+</div>
+<div class="main-info">
+<div class="info">
+<h2>Legaspi, Jerick Harold </h2>
+<h2>ROLES:</h2>
+<p class="info-text">
+<br/>Member
+                            <br/>Web Developer
+                        </p>
+</div>
+</div>
+<div class="class-info">
+<h2>MOTTO:</h2>
+<p class="info-text">
+                    "The birds are watching, the frogs know your secrets and the trees are whispering "Respect the wild before it starts talking back." "
+                    </p>
+</div>
+</div>
+</div>
+<div class="gallery">
+<div class="gallery-container">
+<h1 class="title">Gallery</h1>
+<div class="image-container">
+<img alt="Wildlife image" src="Gallery/1 (1).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (2).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (3).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (4).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (5).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (6).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (7).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (8).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (9).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (10).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (12).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (13).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (14).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (15).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (16).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (17).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (18).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (19).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (20).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (21).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (22).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (26).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (27).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (28).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (30).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (31).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (32).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (33).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (34).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (35).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (36).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (37).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (38).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (39).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (40).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (41).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (42).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (43).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (44).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (45).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (46).jpg"/>
+<img alt="Wildlife image" src="Gallery/1 (47).jpg"/>
+</div>
+</div>
+</div>
+</div>
+<div id="footer"></div>
+<script src="../header-footer/access-header-footer.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/eaa5e9c69b.js"></script>
+<script>
+        function toggleVisibility(elementId, showModal) {
+            var element = document.getElementById(elementId);
+            var modalBg = document.getElementById('modal-bg');
+            
+            if (element.style.display === "none") {
+                // Close all other cards first
+                closeAllCards();
+                
+                // Show this card and modal background
+                element.style.display = "block";
+                if (showModal) {
+                    modalBg.style.display = "block";
+                }
+            } else {
+                element.style.display = "none";
+                modalBg.style.display = "none";
+            }
+        }
+        
+        function closeAllCards() {
+            var cards = document.querySelectorAll('.info--card');
+            var modalBg = document.getElementById('modal-bg');
+            
+            cards.forEach(function(card) {
+                card.style.display = "none";
+            });
+            
+            modalBg.style.display = "none";
+        }
+    </script>
+</body>
+</html>

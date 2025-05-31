@@ -1,0 +1,253 @@
+/* ANIMALS BACK CARD COLOR */
+.binturong {
+  background-color: #E7E5CB;
+}
+
+.cebu-frill-wing {
+  background-color: #DFDCB9;
+}
+
+.dugong {
+  background-color: #CCDEEB;
+}
+
+.giant-golden-crowned-flying-fox {
+  background-color: #F5D7BD;
+}
+
+.giant-scops-owl {
+  background-color: #CAC9B5;
+}
+
+.luzon-bleeding-heart {
+  background-color: #E6DDCB;
+}
+
+.luzon-peacock-swallowtail {
+  background-color: #D1E7FA;
+}
+
+.northern-palawan-tree-squirrel {
+  background-color: #E0DAD1;
+}
+
+.palawan-horned-frog {
+  background-color: #FAD7B4;
+}
+
+.palawan-purple-crab {
+  background-color: #EEDBF0;
+}
+
+.philippine-cobra {
+  background-color: #DBE6CC;
+}
+
+.philippine-cockatoo {
+  background-color: #DFDCB9;
+}
+
+.philippine-crocodile {
+  background-color: #DDD9D5;
+}
+
+.philippine-eagle-ray {
+  background-color: #C4DEED;
+}
+
+.philippine-eagle {
+  background-color: #D3E4CD;
+}
+
+.philippine-flat-headed-frog {
+  background-color: #CCD7BA;
+}
+
+.philippine-flying-dragon {
+  background-color: #DAE7BB;
+}
+
+.philippine-long-tailed-macaque {
+  background-color: #EFFFCC;
+}
+
+.philippine-mouse-deer {
+  background-color: #F7FFD4;
+}
+
+.philippine-naked-backed-fruit-bat {
+  background-color: #D6EFC2;
+}
+
+.philippine-pangolin {
+  background-color: #D1F9B8;
+}
+
+.philippine-warty-pig {
+  background-color: #E0CDB8;
+}
+
+.rufous-hornbill {
+  background-color: #D4D7FF;
+}
+
+.tamaraw {
+  background-color: #D5E1D1;
+}
+
+.tarsier {
+  background-color: #E7FFCC;
+}
+
+.the-gigantes-forest-frog {
+  background-color: #F2EEC0;
+}
+
+.visayan-spotted-deer {
+  background-color: #E0CDB8;
+}
+
+.whale-shark-philippines {
+  background-color: #C2DDF0;
+}
+
+
+
+
+main {
+    margin: 0 auto;
+    padding: 0 20%;
+}
+.zigzag {
+    width: 68.3px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+.wildlife-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+}
+.wildlife-card {
+    aspect-ratio: 1/1;
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-front {
+    background-color: white;
+    transform: rotateY(0deg);
+}
+.card-back {
+    transform: rotateY(180deg);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 22px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    box-sizing: border-box;
+}
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+.card-description {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 12px;
+}
+.big-name {
+    font-size: 22px;
+}
+
+.learn-more-btn {
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.learn-more-btn:hover {
+    background-color: #3a6149;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1200px) {
+    main {
+        padding: 0 10%; 
+    }
+}
+@media (max-width: 768px) {
+    .wildlife-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main {
+        padding: 0 5%;
+    }
+}
+@media (max-width: 480px) {
+    .wildlife-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wildlife Philippines</title>
+<link href="../home-page-images/Slides/logo.png" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="../header-footer/header-footer.css" rel="stylesheet"/>
+<style>
+         .feedback-container {
+            background-color: #fcf9ed;
+            margin: 30px auto 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+         .feedback-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+         .feedback-header h1 {
+            color: #333;
+            margin-top: 0;
+        }
+         .feedback-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+         .form-group {
+            margin-bottom: 20px;
+        }
+         .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #C1E1C1;
+        }
+         .form-group textarea {
+            resize: vertical;
+            min-height: 200px;
+            background-color: #C1E1C1
+        }
+         .form-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+         .form-actions button {
+            background-color: #4A7C59;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+         .form-actions button:hover {
+            background-color: #3a6149;
+        }
+         .thank-you-message {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+        .form-group input,
+        .form-group textarea {
+            font-family: 'Inter', sans-serif;
+            color: #555;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<main>
+<div class="feedback-container">
+<div class="feedback-header">
+<i class="fa-solid fa-envelope fa-5x"></i>
+<h1>Feedbacks</h1>
+</div>
+<p class="feedback-description">
+            Here you can type any feedbacks for the improvement and growth of this website. Your suggestions and ideas
+            will be carefully reviewed and considered to ensure the good experience for all users. Please fill this out in an
+            orderly manner.
+        </p>
+<form action="https://formsubmit.co/manicane4321@gmail.com" method="POST">
+<div class="form-group">
+<label for="name">Name:</label>
+<input id="name" name="name" type="text" value=""/>
+</div>
+<div class="form-group">
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="text" value=""/>
+</div>
+<div class="form-group">
+<label for="feedback">What feedbacks would you like to provide?</label>
+<textarea id="feedback" name="feedback"></textarea>
+</div>
+<div class="form-actions">
+<button type="submit">Submit</button>
+</div>
+</form>
+<p class="thank-you-message">
+            Thank you for taking the time to share your feedback with us.
+            Your insights are invaluable in helping us improve our website.
+        </p>
+</div>
+</main>
+<div id="footer"></div>
+<script src="../header-footer/access-header-footer.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/eaa5e9c69b.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+span {
+    font-weight: bold;
+    color: #4A7C59;
+}
+.nav-path {
+    padding: 10px 20% 8px;
+}
+.nav-path a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-path a:hover {
+  color: #4A7C59;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-path {
+        padding: 8px 10%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .nav-path {
+        padding: 8px 5%;
+    }
+}
+@media screen and (max-width: 576px) {       
+    .nav-path {
+        padding: 5px 5%;
+        font-size: 9pt;
+    }  
+}
