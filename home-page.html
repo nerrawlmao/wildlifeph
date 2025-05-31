@@ -1,138 +1,131 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <base href="/wildlifeph/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wildlife Philippines</title>
-    <link rel="icon" type="image/x-icon" href="/home-page-images/Slides/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/styles/home-page-style.css">
-  <link rel="stylesheet" href="/header-footer/header-footer.css"> 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<base href="/wildlifeph/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wildlife Philippines</title>
+<link href="home-page-images/Slides/logo.png" rel="icon" type="image/x-icon"/>
+<link href0.
+="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="styles/home-page-style.css" rel="stylesheet"/>
+<link href="header-footer/header-footer.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
-  <div id="header"></div>
-  <div class="slider">
-    <div class="slide active" style="background-image: url('/home-page-images/Slides/slide1.jpg');">
-      <div class="slide-content">
-        <h1>Celebrate Philippine Wildlife 🌏🦅</h1>
-        <p>Discover the incredible animals of the Philippines! From the majestic Philippine eagle to the elusive tarsier, explore the beauty of our diverse wildlife.</p>
-        <button class="explore" onclick="location.href="wildlife-classifications/wildlife-classifications.html"'">Explore The Site</button>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('/home-page-images/Slides/slide2.jpg');">
-      <div class="slide-content">
-        <h1>Protect & Conserve 🛡️🐅</h1>
-        <p>Every species matters. Every action counts. Learn about endangered animals and how you can help save them through conservation efforts.</p>
-        <button class="explore" onclick="location.href="wildlife-classifications/wildlife-classifications.html"'">Explore The Site</button>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('/home-page-images/Slides/slide3.png');">
-      <div class="slide-content">
-        <h1>Connect & Take Action 💚🏞️</h1>
-        <p>Know the NGOs, wildlife sanctuaries, and conservation groups that help protect and conserve these beautiful animals.</p>
-        <button class="explore" onclick="location.href="wildlife-classifications/wildlife-classifications.html"'">Explore The Site</button>
-      </div>
-    </div>
-    <div class="dots">
-      <span class="dot active" onclick="setSlide(0)"></span>
-      <span class="dot" onclick="setSlide(1)"></span>
-      <span class="dot" onclick="setSlide(2)"></span>
-    </div>
-  </div>
-  <section class="stats">
-    <div class="content-container">
-      <h2>📊 Why Wildlife Conservation Matters</h2>
-      <div class="stats-container">
-        <canvas id="pieChart" class="pie-chart"></canvas>
-        <div class="stats-cards">
-          <h3 class="cards-title">How much do we really care about the wildlife of the Philippines</h3>
-          <div class="card small-card">
-            <img src="/home-page-images/Stats/icon (3).png" alt="Species Icon" class="statscard-img">
-            <h3>52,177 Species</h3>
-            <p>Philippines is home to around 52,177 species, half of which is endemic to the Philippines archipelago</p>
-          </div>
-
-          <div class="card big-card">
-            <img src="/home-page-images/Stats/icon (2).png" alt="Endangered Icon" class="statscard-img">
-            <h3>About 2000 are critically endangered</h3>
-            <p>"We have over 52,000 species, about half of which are not found anywhere else in the world. Sadly, around 2,000 are either critically endangered or threatened or vulnerable," Lyazaga</p>
-          </div>
-
-          <div class="card small-card">
-            <img src="/home-page-images/Stats/icon (1).png" alt="Budget Icon" class="statscard-img">
-            <h3>DENR 0.46% Budget</h3>
-            <p>Based on the 2023 Philippines national budget of Php 5.28 trillion, DENR the agency that supposes to protect nature only gets P24.08 billion</p>
-          </div>
-        </div>
-      </div>
-      <p style="font-size: 10pt;">Wildlife is essential to the Philippines' rich biodiversity, contributing to healthy ecosystems, natural resources, and cultural heritage. With thousands of unique species, the country is a global hotspot for biodiversity, yet many animals face the threat of extinction due to habitat loss, climate change, and human activities. Conservation is critical not only to protect these species but also to maintain ecological balance, ensuring clean air, water, and sustainable resources for future generations. However, limited funding and awareness hinder efforts to safeguard wildlife. By prioritizing conservation, supporting environmental policies, and spreading awareness, we can help preserve the natural world and the vital benefits it provides to both people and the planet.</p>
-    </div>
-  </section>
-  <section class="favorite-animals">
-    <div class="content-container">
-      <div class="carousel">
-        <h2>Team's Favorite Animals</h2>
-        <div class="carousel-content">
-          <button class="nav left" onclick="changeSlide(-1)">&#10094;</button>
-          <div class="animal-display">
-            <div class="slidefav-wrapper" id="slidefav-wrapper"></div>
-          </div>
-          <button class="nav right" onclick="changeSlide(1)">&#10095;</button>
-        </div>
-        <div class="thumbnails-wrapper" id="thumbnails"></div>
-      </div>
-    </div>
-  </section>
-  <section class="stories-section">
-    <div class="content-container">
-      <h2>Wildlife Rescue Stories 🐾</h2>
-      <p>Discover inspiring stories of rescued and rehabilitated animals across the Philippines.</p>
-
-      <div class="carouselhead-container">
-        <div class="arrow" onclick="prevCard()">&#10094;</div>
-
-        <div class="carouselhead">
-          <div class="storycard side">
-            <img src="/home-page-images/rescue stories/card (1).jpg" alt="Story 1">
-            <div class="summary">
-              <h3>Philippine Eagle Reintroduction: Giving the King of Birds a Second Chance</h3>
-              <p>The Philippine Eagle Foundation continues its mission to restore the endangered Philippine eagle population in Leyte. In the second year of the Philippine Eagle Reintroduction Program, three eagles—Lakpue, Lyra Sinabadan, and Kalatungan I—have been transported to Mahagnao, Leyte for acclimation before their release. Using improved soft-release techniques, conservationists aim to prevent past setbacks and ensure the survival of these majestic raptors. This program is a crucial step in reviving the Leyte eagle population, which was nearly wiped out by Typhoon Yolanda. Support conservation efforts and help protect the King of Birds! 🦅</p>
-              <a href="https://www.reddit.com/r/Philippines/comments/1jh34hd/good_news_philippine_eagles_being_reintroduced_to/">Read more →</a>
-            </div>
-          </div>
-
-          <div class="storycard center">
-            <img src="/home-page-images/rescue stories/card (2).jpg" alt="Story 2">
-            <div class="summary">
-              <h3>Endangered Philippine Deer Rescued and Released in Leyte</h3>
-              <p>A Philippine deer, locally known as "bugsok", was rescued in Kananga, Leyte after suffering wounds from illegal hunting traps and dog bites. The Energy Development Corporation (EDC) Biodiversity Team, along with local authorities, treated the deer at the Ormoc City Wildlife Rescue Center before releasing it back into the Tongonan Geothermal Reservation. As an endangered species, the Philippine deer faces threats from habitat loss and poaching, highlighting the urgent need for stronger conservation efforts.</p>
-              <a href="https://www.rappler.com/philippines/visayas/wounded-endangered-deer-treated-returned-wilds-leyte/">Read more →</a>
-            </div>
-          </div>
-
-          <div class="storycard side">
-            <img src="/home-page-images/rescue stories/card (3).jpg" alt="Story 3">
-            <div class="summary">
-              <h3>Wounded Philippine Eagle-Owl Rescued in Bukidnon</h3>
-              <p>A Philippine eagle-owl, an endemic and critically endangered species, was rescued in San Fernando, Bukidnon by forest guards from the Philippine Eagle Center (PEC). Found with multiple injuries, the owl was brought to Central Mindanao University's veterinary clinic for treatment and is now recovering in Davao City. Experts emphasize that the presence of these owls signals a healthy ecosystem, highlighting the need for stronger protection against illegal hunting and deforestation.</p>
-              <a href="https://www.gmanetwork.com/regionaltv/news/100215/wounded-philippine-eagleowl-rescued-in-bukidnon/story/">Read more →</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="arrow" onclick="nextCard()">&#10095;</div>
-      </div>
-    </div>
-  </section>
-
-  <div id="footer"></div>
-  
-  <script src="/header-footer/access-header-footer.js"></script>
-  <script src="https://kit.fontawesome.com/eaa5e9c69b.js" crossorigin="anonymous"></script>
-  <script src="/styles/home-page-script.js"></script>
+<div id="header"></div>
+<div class="slider">
+<div class="slide active" style="background-image: url('/home-page-images/Slides/slide1.jpg');">
+<div class="slide-content">
+<h1>Celebrate Philippine Wildlife 🌏🦅</h1>
+<p>Discover the incredible animals of the Philippines! From the majestic Philippine eagle to the elusive tarsier, explore the beauty of our diverse wildlife.</p>
+<button class="explore" onclick="location.href='/wildlife-classifications/wildlife-classifications.html'">Explore The Site</button>
+</div>
+</div>
+<div class="slide" style="background-image: url('/home-page-images/Slides/slide2.jpg');">
+<div class="slide-content">
+<h1>Protect &amp; Conserve 🛡️🐅</h1>
+<p>Every species matters. Every action counts. Learn about endangered animals and how you can help save them through conservation efforts.</p>
+<button class="explore" onclick="location.href='wildlife-classifications/wildlife-classifications.html'">Explore The Site</button>
+</div>
+</div>
+<div class="slide" style="background-image: url('/home-page-images/Slides/slide3.png');">
+<div class="slide-content">
+<h1>Connect &amp; Take Action 💚🏞️</h1>
+<p>Know the NGOs, wildlife sanctuaries, and conservation groups that help protect and conserve these beautiful animals.</p>
+<button class="explore" onclick="location.href='wildlife-classifications/wildlife-classifications.html'">Explore The Site</button>
+</div>
+</div>
+<div class="dots">
+<span class="dot active" onclick="setSlide(0)"></span>
+<span class="dot" onclick="setSlide(1)"></span>
+<span class="dot" onclick="setSlide(2)"></span>
+</div>
+</div>
+<section class="stats">
+<div class="content-container">
+<h2>📊 Why Wildlife Conservation Matters</h2>
+<div class="stats-container">
+<canvas class="pie-chart" id="pieChart"></canvas>
+<div class="stats-cards">
+<h3 class="cards-title">How much do we really care about the wildlife of the Philippines</h3>
+<div class="card small-card">
+<img alt="Species Icon" class="statscard-img" src="home-page-images/Stats/icon (3).png"/>
+<h3>52,177 Species</h3>
+<p>Philippines is home to around 52,177 species, half of which is endemic to the Philippines archipelago</p>
+</div>
+<div class="card big-card">
+<img alt="Endangered Icon" class="statscard-img" src="home-page-images/Stats/icon (2).png"/>
+<h3>About 2000 are critically endangered</h3>
+<p>"We have over 52,000 species, about half of which are not found anywhere else in the world. Sadly, around 2,000 are either critically endangered or threatened or vulnerable," Lyazaga</p>
+</div>
+<div class="card small-card">
+<img alt="Budget Icon" class="statscard-img" src="home-page-images/Stats/icon (1).png"/>
+<h3>DENR 0.46% Budget</h3>
+<p>Based on the 2023 Philippines national budget of Php 5.28 trillion, DENR the agency that supposes to protect nature only gets P24.08 billion</p>
+</div>
+</div>
+</div>
+<p style="font-size: 10pt;">Wildlife is essential to the Philippines' rich biodiversity, contributing to healthy ecosystems, natural resources, and cultural heritage. With thousands of unique species, the country is a global hotspot for biodiversity, yet many animals face the threat of extinction due to habitat loss, climate change, and human activities. Conservation is critical not only to protect these species but also to maintain ecological balance, ensuring clean air, water, and sustainable resources for future generations. However, limited funding and awareness hinder efforts to safeguard wildlife. By prioritizing conservation, supporting environmental policies, and spreading awareness, we can help preserve the natural world and the vital benefits it provides to both people and the planet.</p>
+</div>
+</section>
+<section class="favorite-animals">
+<div class="content-container">
+<div class="carousel">
+<h2>Team's Favorite Animals</h2>
+<div class="carousel-content">
+<button class="nav left" onclick="changeSlide(-1)">❮</button>
+<div class="animal-display">
+<div class="slidefav-wrapper" id="slidefav-wrapper"></div>
+</div>
+<button class="nav right" onclick="changeSlide(1)">❯</button>
+</div>
+<div class="thumbnails-wrapper" id="thumbnails"></div>
+</div>
+</div>
+</section>
+<section class="stories-section">
+<div class="content-container">
+<h2>Wildlife Rescue Stories 🐾</h2>
+<p>Discover inspiring stories of rescued and rehabilitated animals across the Philippines.</p>
+<div class="carouselhead-container">
+<div class="arrow" onclick="prevCard()">❮</div>
+<div class="carouselhead">
+<div class="storycard side">
+<img alt="Story 1" src="home-page-images/rescue stories/card (1).jpg"/>
+<div class="summary">
+<h3>Philippine Eagle Reintroduction: Giving the King of Birds a Second Chance</h3>
+<p>The Philippine Eagle Foundation continues its mission to restore the endangered Philippine eagle population in Leyte. In the second year of the Philippine Eagle Reintroduction Program, three eagles—Lakpue, Lyra Sinabadan, and Kalatungan I—have been transported to Mahagnao, Leyte for acclimation before their release. Using improved soft-release techniques, conservationists aim to prevent past setbacks and ensure the survival of these majestic raptors. This program is a crucial step in reviving the Leyte eagle population, which was nearly wiped out by Typhoon Yolanda. Support conservation efforts and help protect the King of Birds! 🦅</p>
+<a href="https://www.reddit.com/r/Philippines/comments/1jh34hd/good_news_philippine_eagles_being_reintroduced_to/">Read more →</a>
+</div>
+</div>
+<div class="storycard center">
+<img alt="Story 2" src="home-page-images/rescue stories/card (2).jpg"/>
+<div class="summary">
+<h3>Endangered Philippine Deer Rescued and Released in Leyte</h3>
+<p>A Philippine deer, locally known as "bugsok", was rescued in Kananga, Leyte after suffering wounds from illegal hunting traps and dog bites. The Energy Development Corporation (EDC) Biodiversity Team, along with local authorities, treated the deer at the Ormoc City Wildlife Rescue Center before releasing it back into the Tongonan Geothermal Reservation. As an endangered species, the Philippine deer faces threats from habitat loss and poaching, highlighting the urgent need for stronger conservation efforts.</p>
+<a href="https://www.rappler.com/philippines/visayas/wounded-endangered-deer-treated-returned-wilds-leyte/">Read more →</a>
+</div>
+</div>
+<div class="storycard side">
+<img alt="Story 3" src="home-page-images/rescue stories/card (3).jpg"/>
+<div class="summary">
+<h3>Wounded Philippine Eagle-Owl Rescued in Bukidnon</h3>
+<p>A Philippine eagle-owl, an endemic and critically endangered species, was rescued in San Fernando, Bukidnon by forest guards from the Philippine Eagle Center (PEC). Found with multiple injuries, the owl was brought to Central Mindanao University's veterinary clinic for treatment and is now recovering in Davao City. Experts emphasize that the presence of these owls signals a healthy ecosystem, highlighting the need for stronger protection against illegal hunting and deforestation.</p>
+<a href="https://www.gmanetwork.com/regionaltv/news/100215/wounded-philippine-eagleowl-rescued-in-bukidnon/story/">Read more →</a>
+</div>
+</div>
+</div>
+<div class="arrow" onclick="nextCard()">❯</div>
+</div>
+</div>
+</section>
+<div id="footer"></div>
+<script src="header-footer/access-header-footer.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/eaa5e9c69b.js"></script>
+<script src="styles/home-page-script.js"></script>
 </body>
 </html>
